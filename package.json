@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "axios": "^1.6.2",
+    "body-parser": "^1.20.2",
+    "bootstrap": "^5.3.2",
+    "express": "^4.18.2"
+  },
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "web site to get weather today",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node.js",
+    "npm",
+    "JS",
+    "EJS",
+    "HTML",
+    "CSS",
+    "Bootstrap",
+    "axios",
+    "express",
+    "GIT"
+  ],
+  "author": "DiaaEldinHassan",
+  "license": "ISC"
+}
