@@ -1,0 +1,28 @@
+body
+{
+    background-color: black;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+.container
+{
+    text-align: center;
+}
+.ms-auto
+{
+    margin-right: 20px;
+}
+li
+{
+    margin-right: 50px;
+}
+img
+{
+ background: transparent;
+ height: 100%;
+ width: 100%;
+}
+.mid
+{
+    background-color: white;
+}
