@@ -1,0 +1,13 @@
+ <%- include('header.ejs') %>
+ <div class="container for row">
+<form action="mailto:diaahassan777@gmail.com" method="get">
+    <div class="col-sm-12"><label for="Email">Please enter your email : </label>
+    <input type="email" name="email" class="rounded bg-outline-light text"  id="email" placeholder="Your email........" required><br></div>
+    <div class="container message col-sm-12">
+    <label for="text" class="lmes">Please enter your message :</label>
+    <textarea name="message" id="message" class="rounded" cols="30" rows="10" placeholder="Your message........." required></textarea><br>
+    </div>
+    <div class="col-sm-12"><input type="submit" value="Submit" class="btn btn-lg btn-outline-info sub"></div>
+</form>
+</div>
+<%- include('footer.ejs') %>

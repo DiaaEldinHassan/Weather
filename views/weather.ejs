@@ -1,0 +1,14 @@
+<%- include('header.ejs') %>
+<div class="row">
+    <div class="col-6">No data yet</div>
+    <div class="col-6">
+<form action="/submit" method="post">
+<%- include('countries.ejs') %>
+<label for="City">Please enter your city :</label><br>
+<input type="text" name="city" placeholder="City" id="city" class="rounded text"><br>
+<label for="limit">Enter limit <span style="color: red;">  *Optional</span> :</label><br>
+<input type="number" name="limit" id="limit" placeholder="Limit" class="text rounded"><br>
+<input type="submit" value="Submit" class="btn btn-lg btn-outline-info sub">
+</form>
+</div></div>
+<%- include('footer.ejs') %>

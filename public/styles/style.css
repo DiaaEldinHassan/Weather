@@ -1,13 +1,25 @@
+:root
+{
+    --dark:#191825;
+    --blue:aqua;
+    --purple:#4e4564;
+}
+/* ------------------------------------------------Home page------------------------------------------------------- */
 body
 {
-    background-color: black;
+    background-color: var(--dark);
     color: white;
     font-family: 'Rubik', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+/* ---------------------------------------------------------------------------------------------------------------- */
 .container
 {
     text-align: center;
 }
+/* ------------------------------------------------navbar---------------------------------------------------------- */
 .ms-auto
 {
     margin-right: 20px;
@@ -16,13 +28,381 @@ li
 {
     margin-right: 50px;
 }
-img
+nav[class="navbar navbar-expand-lg bg-dark"]
 {
- background: transparent;
- height: 100%;
- width: 100%;
+    --bs-bg-opacity: 0;
 }
-.mid
+.navbar-toggler
 {
     background-color: white;
+}
+/* --------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------top section------------------------------------------------- */
+.clo
+{
+    margin-left: 100px;
+}
+.cloud
+{
+    height: 400px;
+    width: 300px;
+}
+.lap
+{
+ background: transparent;
+ height: 600px;
+ width: 500px;
+ margin-top: 0px;
+ position: relative;
+ left: 0px;
+}
+.mob
+{
+    height: 300px;
+    width: 200px;
+    z-index: -1;
+    position: relative;
+    left: 70px;
+    transform: rotate(-10deg);
+    top: 40px;
+}
+.top
+{
+    text-align: center;
+    height: 600px;
+}
+/* --------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------mid section------------------------------------------------------------ */
+.mid
+{
+    background-color: var(--purple);
+    text-align: center;
+
+}
+.wegif
+{
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    margin: 10px 0px;
+}
+.mid>h4
+{
+    margin-bottom: 0;
+}
+/* ---------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------bottom section------------------------------------------------------ */
+.bot
+{
+    background-color: var(--purple);
+    text-align: center;
+    margin: 0;
+}
+.bot-icon
+{
+    height: 200px;
+    width: 200px;
+    margin-top: 10px;
+   filter: invert(100%);
+}
+
+.bot-icon:hover
+{
+    filter: invert(50%);
+    color: greenyellow;
+}
+/* ------------------------------------------footer----------------------------------------------- */
+.foot
+{
+    text-align: center;
+    background-color: white;
+    color: black;
+    margin-top: auto;
+}
+i
+{
+    color: grey;
+    margin-left: 10px;
+}
+.end
+{
+    margin: 0;
+}
+/* ----------------------------------------Form page............................................. */
+.for
+{
+    text-align: center;
+}
+input
+{
+    margin-top: 10px;
+}
+#message
+{
+    background-color: transparent;
+    color: white;
+    margin-top: 10px;
+    width:400px;
+    height:200px;
+    transition: width 2s,height 2s;
+    border-color: grey;
+}
+#message:focus
+{
+  width: 600px;
+  height: 300px;
+  border: 3px solid var(--blue);
+  outline: var(--blue);
+}
+label
+{
+    margin-right: 10px;
+}
+.message
+{
+    padding-left: 0px;
+}
+.after
+{
+    position: fixed;
+    margin: 10px 0;
+}
+.text
+{
+    height: 40px;
+    width: 200px;
+    background-color: transparent;
+    color: white;
+    border-color: grey;
+    transition: width 2s,height 2s;
+}
+.text:focus
+{
+    width: 400px;
+    height: 60px;
+    border: 3px solid var(--blue);
+    outline: var(--blue);
+}
+.sub
+{
+    width: 400px;
+    margin-left: 000px;
+}
+/* ------------------------------------------------------------------------------------ */
+/* -------------------------------------Weather page------------------------------------ */
+.form-control
+{
+    background-color: gray;
+    border-color: var(--blue);
+    width: 50%;
+}
+/* --------------------------------------mobile---------------------------------------- */
+@media screen and (max-width:1200px) {
+    /* -----------------------------Home page----------------------------------------- */
+    .clo
+    {
+        margin-left: 100px;
+    }
+    .cloud
+    {
+        height: 400px;
+        width: 300px;
+    }
+    .lap
+    {
+     background: transparent;
+     height: 600px;
+     width: 500px;
+     margin-top: 0px;
+     position: relative;
+     left: -50px;
+    }
+    .mob
+    {
+        height: 300px;
+        width: 200px;
+        z-index: -1;
+        position: relative;
+        left: 70px;
+        transform: rotate(-10deg);
+        top: 40px;
+    }
+    .top
+    {
+        text-align: center;
+        height: fit-content;
+    }
+}
+@media screen and (max-width:987px) {
+    /* ------------------------------------Home page---------------------------------- */
+    .clo
+    {
+        margin-left: 100px;
+    }
+    .cloud
+    {
+        height: 400px;
+        width: 300px;
+    }
+    .lap
+    {
+     background: transparent;
+     height: 600px;
+     width: 500px;
+     margin-top: 0px;
+     position: relative;
+     left: -200px;
+    }
+    .mob
+    {
+        height: 300px;
+        width: 200px;
+        z-index: -1;
+        position: relative;
+        left: -30px;
+        transform: rotate(-10deg);
+        top: 40px;
+    }
+    .top
+    {
+        text-align: center;
+        height: fit-content;
+    }
+}
+@media screen and (max-width:850px) {
+    /* -----------------------------------------Home Page------------------------------ */
+    .clo
+    {
+        margin-left: 100px;
+    }
+    .cloud
+    {
+        height: 400px;
+        width: 300px;
+    }
+    .lap
+    {
+     background: transparent;
+     height: 600px;
+     width: 300px;
+     margin-top: 0px;
+     position: relative;
+     left: -50px;
+    }
+    .mob
+    {
+        height: 300px;
+        width: 100px;
+        z-index: -1;
+        position: relative;
+        left: 70px;
+        transform: rotate(-10deg);
+        top: 40px;
+    }
+    .top
+    {
+        text-align: center;
+        height: fit-content;
+    }
+}
+
+   
+@media screen and (max-width:764px) {
+    /* ----------------------------------------------Home page------------------------------------------------------- */
+    /* --------------------------------------------------top section------------------------------------------------- */
+    .clo
+    {
+        margin-left: 0;
+    }
+.cloud
+{
+    height: 200px;
+    width: 200px;
+}
+.lap
+{
+ background: transparent;
+ height: 400px;
+ width: 400px;
+ position: relative;
+ z-index: 0;
+ left: 0;
+margin-top: 50px;
+}
+.mob
+{
+    height: 250px;
+    width:100px;
+    z-index: 0;
+    position: relative;
+    /* left: 330px; */
+    transform: rotate(0deg);
+    margin-top: 40px;
+    left: 0;
+}
+.top
+{
+    height: fit-content;
+}
+/* ---------------------------------------mid section------------------------------------------------------------ */
+.mid
+{
+    background-color: var(--purple);
+    text-align: center;
+    z-index: 1;
+    position: relative;
+}
+.wegif
+{
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    margin: 10px 0px;
+}
+.mid>h4
+{
+    margin-bottom: 0;
+}
+/* --------------------------------------------------bot section------------------------------------------------------- */
+    .bot
+{
+    background-color: var(--purple);
+    text-align: center;
+    margin: 0;
+}
+.bot-icon
+{
+    height: 100px;
+    width: 100px;
+    margin-top: 10px;
+   filter: invert(100%);
+}
+
+.bot-icon:hover
+{
+    filter: invert(50%);
+    color: greenyellow;
+}
+}
+/* --------------------------------------------------- */
+@media screen and (max-width:550px) {
+    .lap
+{
+ background: transparent;
+ height: 300px;
+ width: 450px;
+ margin-top: 50px;
+
+ z-index: 0;
+}
+.mob
+{
+    height: 250px;
+    width:150px;
+    z-index: 0;
+    position: relative;
+    /* left: 330px; */
+    transform: rotate(0deg);
+    margin-top: 40px;
+}
 }
