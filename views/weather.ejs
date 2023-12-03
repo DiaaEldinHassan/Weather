@@ -1,12 +1,27 @@
 <%- include('header.ejs') %>
-<div class="row">
-    <div class="col-6">No data yet</div>
+<div class="row ">
+  <div class="col-6 left">
+    <h1 class="time"></h1>
+    <% if (locals.atmo||locals.weather) { %>
+      <% if (atmo=="Clouds") { %>
+    <i class="fa-solid fa-cloud fa-2xl" style="color: #f5f5f5;"></i>
+    <% }else if (atmo=="Clear"){ %>
+    <i class="fa-solid fa-sun fa-2xl" style="color: #fafafa;"></i>
+    <% } else if (atmo=="Rainy") { %>
+      <i class="fa-solid fa-cloud-showers-heavy fa-2xl" style="color: #ffffff;"></i>
+      <% } %>
+      <div class="left-weather"> 
+      <h3 class="atmo"><%= atmo %></h3>
+      <h3 class="weather"><%= weather %>°</h3>
+    </div>
+    <% } %>
+    </div>
     <div class="col-6">
 <form action="/submit" method="post">
 <%- include('countries.ejs') %>
-<label for="City">Please enter your city :</label><br>
+<label for="City">Please enter your city<span style="color: red;">  *Required</span> :</label><br>
 <input type="text" name="city" placeholder="City" id="city" class="rounded text"><br>
-<label for="limit">Enter limit <span style="color: red;">  *Optional</span> :</label><br>
+<label for="limit">Enter limit <span style="color: red;">  *Required</span> :</label><br>
 <input type="number" name="limit" id="limit" placeholder="Limit" class="text rounded"><br>
 <input type="submit" value="Submit" class="btn btn-lg btn-outline-info sub">
 </form>

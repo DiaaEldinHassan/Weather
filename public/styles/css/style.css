@@ -190,11 +190,37 @@ label
 }
 /* ------------------------------------------------------------------------------------ */
 /* -------------------------------------Weather page------------------------------------ */
+
+.left
+{
+    text-align: center;
+}
+.fa-2xl
+{
+    font-size: 40px !important;
+}
 .form-control
 {
     background-color: gray;
     border-color: var(--blue);
     width: 50%;
+}
+.time
+{
+    text-align: center;
+}
+.left-weather
+{
+    margin-top: 15px;
+}
+.atmo
+{
+    display: inline-block;
+}
+.weather
+{
+    display: inline-block;
+    margin-left: 5px;
 }
 /* --------------------------------------mobile---------------------------------------- */
 @media screen and (max-width:1200px) {
