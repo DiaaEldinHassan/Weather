@@ -1,10 +1,11 @@
 import express from "express";
 import bodyParser from "body-parser";
 import axios from "axios";
+import {api} from "./api.js";
 
 const port=3000;
 const app=express();
-const API="e2d2712c5e552740dd2230ac66165b22";
+const API=api;
 var country="";
 var city="";
 var limit="";
@@ -25,7 +26,6 @@ app.get("/form",(req,res)=>{
 });
 app.get("/weather",async(req,res)=>{
     res.render("weather.ejs");
-    // console.log(fullTime);
 });
 app.post("/submit",async(req,res)=>{
     console.log(req.body);
@@ -46,11 +46,9 @@ app.post("/submit",async(req,res)=>{
         const result=await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API}`);
         celsius=temp(result.data.main.temp);
         atmo=result.data.weather[0].main;
-        console.log(result.data.weather[0].main);
-        console.log(result.data);
         res.render("weather.ejs",{weather:celsius,atmo:atmo});
     } catch (error) {
-        console.log(error.status);
+
         res.render("weather.ejs",{weather:error.status});
     }
 });
