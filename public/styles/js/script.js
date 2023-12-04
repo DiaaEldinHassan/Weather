@@ -1,8 +1,9 @@
 function Time() {
 
     // Creating object of the Date class
+    var week=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
     var date = new Date();
-   
+    var day=date.getDay();
     // Get current hour
     var hour = date.getHours();
     // Get current minute
@@ -34,13 +35,21 @@ function Time() {
     hour = update(hour);
     minute = update(minute);
     second = update(second);
-   
+   $(".day").text(week[day]);
     // Adding time elements to the div
-    $(".time").text(hour+":"+minute+":"+second); 
+    $(".time").text(" "+hour+":"+minute+":"+second+" "+period); 
+    $(".time").css("color", "lime");
    
     // Set Timer to 1 sec (1000 ms)
-    setTimeout(Time, 1000);
+    setTimeout(()=>{
+        Time();
+    }, 1000);
+    setTimeout(() => {
+        $(".time").css("color", "black");
+    }, 500);
    }
+
+  
    
     // Function to update time elements if they are less than 10
     // Append 0 before time elements if they are less than 10
@@ -52,5 +61,5 @@ function Time() {
     return t;
     }
    }
-   
+ 
    Time();

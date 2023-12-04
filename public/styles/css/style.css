@@ -193,11 +193,26 @@ label
 
 .left
 {
-    text-align: center;
+    text-align: start;
+
+}
+.left-after-mor
+{
+  background-image: url("../../images/day.jpg");
+}
+.left-after-ngt
+{
+    background-image: url("../../images/night.jpg");
 }
 .fa-2xl
 {
-    font-size: 40px !important;
+    font-size: 60px !important;
+    color: yellow;
+  
+}
+.sky
+{
+    margin-bottom: 20px;
 }
 .form-control
 {
@@ -207,7 +222,13 @@ label
 }
 .time
 {
-    text-align: center;
+    text-align: start;
+    color: gray;
+    margin: 0px;
+}
+.time-afer
+{
+    color: greenyellow !important;
 }
 .left-weather
 {
